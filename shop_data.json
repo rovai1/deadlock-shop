@@ -1,0 +1,44 @@
+[
+    {
+        "item_id": 1,
+        "name": "Basic Magazine",
+        "price": 500,
+        "type": "Weapon",
+
+        "stats": [
+            "+24% Ammo",
+            "+15% Weapon Damage"
+        ],
+
+        "passive": "",
+        "passive_cooldown": 0,
+
+        "active": "",
+        "active_cooldown": 0,
+
+        "component_of": "INT | id of the component",
+        "components": [],
+        "component_icon": "",
+
+        "icon": ""
+    },
+    {
+        "name": "",
+        "price": 0,
+        "type": "",
+
+        "stats": [],
+
+        "passive": "",
+        "passive_cooldown": 0,
+
+        "active": "",
+        "active_cooldown": 0,
+
+        "component_of": "",
+        "components": [],
+        "component_icon": "",
+
+        "icon": ""
+    }
+]
