@@ -26,6 +26,7 @@ function CreateCard(shittyobj){
     var clone = cardTemplate.content.cloneNode(true)
     clone.querySelector(".item_icon").src = shittyobj.icon
     clone.querySelector(".item_title").innerHTML = shittyobj.name
+    clone.querySelector(".item_icon_div").style.setProperty("--mod-color", "var(--mod-color-" + shittyobj.type + (shittyobj.active? "-Active" : "") +")")
     document.getElementsByClassName("item_shop_row")[0].appendChild(clone)
 }
 
@@ -44,7 +45,7 @@ const temporaryJSON = [
         "passive": "",
         "passive_cooldown": 0,
 
-        "active": "",
+        "active": false,
         "active_cooldown": 0,
 
         "component_of": "INT | id of the component",
@@ -63,7 +64,7 @@ const temporaryJSON = [
         "passive": "",
         "passive_cooldown": 0,
 
-        "active": "",
+        "active": false,
         "active_cooldown": 0,
 
         "component_of": "",
@@ -82,7 +83,7 @@ const temporaryJSON = [
         "passive": "",
         "passive_cooldown": 0,
 
-        "active": "",
+        "active": false,
         "active_cooldown": 0,
 
         "component_of": "",
@@ -101,7 +102,26 @@ const temporaryJSON = [
         "passive": "",
         "passive_cooldown": 0,
 
-        "active": "",
+        "active": false,
+        "active_cooldown": 0,
+
+        "component_of": "",
+        "components": [],
+        "component_icon": "",
+
+        "icon": "icons/upgrades/mods_weapon/ammo_scavenger_psd.png"
+    },
+    {
+        "name": "Infuser",
+        "price": 500,
+        "type": "Spirit",
+
+        "stats": [],
+
+        "passive": "",
+        "passive_cooldown": 0,
+
+        "active": true,
         "active_cooldown": 0,
 
         "component_of": "",
