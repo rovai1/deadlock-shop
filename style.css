@@ -1,3 +1,36 @@
+body {
+    background: rgb(38,57,25);
+    background: linear-gradient(
+        180deg, 
+        rgba(2, 3, 2, 0.9) 20%, 
+        rgba(2, 7, 2, 0.9) 50%, 
+        rgba(6, 17, 0, 0.9) 100%
+    );
+}
+
+.shop {
+    display: flex;
+    flex-direction: row;
+}
+
+.left_side {
+    padding: 50px;
+    width: 600px;
+}
+
+.shop_panels {
+    margin-top: 150px;
+}
+
+.shop_logo {
+    height: 150px;
+    width: 370px;
+}
+
+.selected_shop_panel {
+    border-top: 10px solid orange;
+}
+
 .item_shop_row {
     background-color: rgb(143, 92, 25);
     padding: 30px;
