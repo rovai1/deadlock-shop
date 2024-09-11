@@ -1,21 +1,21 @@
-
 const reader = new FileReader()
-fetch('./shop_data.json')
-    .then((response) => response.json)
-    .then((json) => readJson(jsonFile))
+// fetch('./shop_data.json')
+//     .then((response) => response.json)
+//     .then((json) => readJson(jsonFile))
 
 
 function readJson(jsonFile){
-    reader.readAsText(jsonFile)
-    reader.onload = function(){
+    
+    // reader.readAsText(jsonFile)
+    // reader.onload = function(){
         
-        var data = JSON.parse(reader.result)
-        CardRenderer(data)
-    }
+        CardRenderer(jsonFile)
+    // }
 }
 
 function CardRenderer(data){
     data.forEach(element => {
+        // var data = JSON.parse(element)
         CreateCard(element)
     });
 }
@@ -25,6 +25,53 @@ function CreateCard(shittyobj){
     var cardTemplate = document.getElementsByClassName("card_template")[0]
     var clone = cardTemplate.content.cloneNode(true)
     clone.querySelector(".item_icon").src = shittyobj.icon
-    clone.querySelector(".item_title").innerHTML = shittyobj.title
+    clone.querySelector(".item_title").innerHTML = shittyobj.name
     document.getElementsByClassName("item_shop_row")[0].appendChild(clone)
 }
+
+
+const temporaryJSON = [
+    {
+        "name": "Basic Magazine",
+        "price": 500,
+        "type": "Weapon",
+
+        "stats": [
+            "+24% Ammo",
+            "+15% Weapon Damage"
+        ],
+
+        "passive": "",
+        "passive_cooldown": 0,
+
+        "active": "",
+        "active_cooldown": 0,
+
+        "component_of": "INT | id of the component",
+        "components": [],
+        "component_icon": "",
+
+        "icon": "icons/upgrades/mods_weapon/clip_size_psd.png"
+    },
+    {
+        "name": "Close Quarters",
+        "price": 500,
+        "type": "Weapon",
+
+        "stats": [],
+
+        "passive": "",
+        "passive_cooldown": 0,
+
+        "active": "",
+        "active_cooldown": 0,
+
+        "component_of": "",
+        "components": [],
+        "component_icon": "",
+
+        "icon": "icons/upgrades/mods_weapon/close_range_psd.png"
+    }
+]
+
+readJson(temporaryJSON)

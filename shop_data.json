@@ -22,9 +22,9 @@
         "icon": "icons/upgrades/mods_weapon/clip_size_psd.png"
     },
     {
-        "name": "",
-        "price": 0,
-        "type": "",
+        "name": "Close Quarters",
+        "price": 500,
+        "type": "Weapon",
 
         "stats": [],
 
@@ -38,6 +38,6 @@
         "components": [],
         "component_icon": "",
 
-        "icon": ""
+        "icon": "icons/upgrades/mods_weapon/"
     }
 ]
