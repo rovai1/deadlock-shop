@@ -35,7 +35,7 @@
 }
 
 .item_icon {
-    width: auto;
+    width: 50px;
     height: auto;
     filter: brightness(0%);
 }

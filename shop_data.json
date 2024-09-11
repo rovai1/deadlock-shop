@@ -1,6 +1,5 @@
 [
     {
-        "item_id": 1,
         "name": "Basic Magazine",
         "price": 500,
         "type": "Weapon",
@@ -20,7 +19,7 @@
         "components": [],
         "component_icon": "",
 
-        "icon": ""
+        "icon": "icons/upgrades/mods_weapon/clip_size_psd.png"
     },
     {
         "name": "",
