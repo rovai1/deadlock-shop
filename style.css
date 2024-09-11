@@ -10,10 +10,18 @@
 .item_shop_item {
     border-radius: 5px;
     background-color: beige;
-    width: 135px;
+    width: 131px;
     height: 150px;
     margin-inline: 5px;
     box-shadow: 6px 6px 0px  rgba(0, 0, 0, 0.3);
+    transition: all 50ms;
+}
+
+.item_shop_item:hover
+{
+    scale: 1.03;
+    box-shadow: 1px 1px 0px  rgba(0, 0, 0, 0.3);
+
 }
 
 .item_icon_div {
