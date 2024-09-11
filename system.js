@@ -71,6 +71,44 @@ const temporaryJSON = [
         "component_icon": "",
 
         "icon": "icons/upgrades/mods_weapon/close_range_psd.png"
+    },
+    {
+        "name": "Enduring Spirit",
+        "price": 500,
+        "type": "Vitality",
+
+        "stats": [],
+
+        "passive": "",
+        "passive_cooldown": 0,
+
+        "active": "",
+        "active_cooldown": 0,
+
+        "component_of": "",
+        "components": [],
+        "component_icon": "",
+
+        "icon": "icons/upgrades/mods_armor/resilience_psd.png"
+    },
+    {
+        "name": "Ammo Scavenger",
+        "price": 500,
+        "type": "Spirit",
+
+        "stats": [],
+
+        "passive": "",
+        "passive_cooldown": 0,
+
+        "active": "",
+        "active_cooldown": 0,
+
+        "component_of": "",
+        "components": [],
+        "component_icon": "",
+
+        "icon": "icons/upgrades/mods_weapon/ammo_scavenger_psd.png"
     }
 ]
 
