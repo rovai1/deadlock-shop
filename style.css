@@ -34,22 +34,23 @@ body {
 }
 
 .shop_logo {
-    height: 150px;
     width: 370px;
+    height: auto;
 }
 
 .selected_shop_panel {
-    border-top: 10px solid #e69437;
+    border-top: 10px solid rgb(230, 148, 55);
 }
 
 .item_shop_row {
-    background-color: #663D00;
+    background-color: rgb(117,76,13);
     padding: 30px;
     width: 1400px;
     height: 140px;
     display: flex;
     flex-direction: row;
-    filter: brightness(80%);
+    filter: brightness(90%);
+    align-items: center;
 }
 
 .item_shop_row:hover {
@@ -57,13 +58,14 @@ body {
 }
 
 .item_shop_row2 {
-    background-color: #663D00;
+    background-color: rgb(117,76,13);
     padding: 30px;
     width: 1400px;
     height: 140px;
     display: flex;
     flex-direction: row;
-    filter: brightness(70%);
+    filter: brightness(80%);
+    align-items: center;
 }
 
 .item_shop_row2:hover {
@@ -176,17 +178,17 @@ body {
     border-top: rgb(194, 136, 240) 10px solid;
 }
 
-.top_border_weapon:active {
+.top_border_weapon.focus {
     filter: brightness(100%);
     background-color: rgb(230, 148, 55);
 }
 
-.top_border_vitality:active {
+.top_border_vitality.focus {
     filter: brightness(100%);
     background-color: rgb(116, 176, 28);
 }
 
-.top_border_spirit:active {
+.top_border_spirit.focus {
     filter: brightness(100%);
     background-color: rgb(194, 136, 240);
 }

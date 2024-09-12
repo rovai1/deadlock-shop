@@ -35,45 +35,55 @@ function CreateCard(shittyobj) {
 
     // This is temporary way to see how it now actually looks like. 
     // maybe we make all items have a tier and thats how we then separete them
-    switch(shittyobj.price){
-        case 500:
+    switch(shittyobj.tier){
+        case 1:
             document.getElementsByClassName("item_shop_row")[0].appendChild(clone)
-        case 1250:
+        case 2:
             document.getElementsByClassName("item_shop_row2")[0].appendChild(clone)
-        case 3000:
+        case 3:
             document.getElementsByClassName("item_shop_row")[1].appendChild(clone)
-        case 6300:
+        case 4:
             document.getElementsByClassName("item_shop_row2")[1].appendChild(clone)
     }
 }
 // ik its bad
 function ChangeCategory(changed) {
     ChangeVisibility(selectedModType)
+
+    const buttons = document.querySelectorAll('.category_button');
+
+    buttons.forEach(button => {
+        button.classList.remove("focus")
+    })
+
     switch(changed){
         default:
         case 0:
             selectedModType = "Weapon"
+            document.getElementsByClassName("item_shop_row")[0].style.backgroundColor = "rgb(117,76,13)"
+            document.getElementsByClassName("item_shop_row2")[0].style.backgroundColor = "rgb(117,76,13)"
+            document.getElementsByClassName("item_shop_row")[1].style.backgroundColor = "rgb(117,76,13)"
+            document.getElementsByClassName("item_shop_row2")[1].style.backgroundColor = "rgb(117,76,13)"
             document.getElementsByClassName("selected_shop_panel")[0].style.borderTopColor = "rgb(230, 148, 55)"
-            document.getElementsByClassName("item_shop_row")[0].style.backgroundColor = "rgb(102, 61, 0)"
-            document.getElementsByClassName("item_shop_row2")[0].style.backgroundColor = "rgb(102, 61, 0)"
-            document.getElementsByClassName("item_shop_row")[1].style.backgroundColor = "rgb(102, 61, 0)"
-            document.getElementsByClassName("item_shop_row2")[1].style.backgroundColor = "rgb(102, 61, 0)"
+            document.getElementsByClassName("category_button")[0].classList.add("focus")
             break;        
         case 1:
             selectedModType = "Vitality"
-            document.getElementsByClassName("selected_shop_panel")[0].style.borderTopColor = "GreenYellow"
-            document.getElementsByClassName("item_shop_row")[0].style.backgroundColor = "green"
-            document.getElementsByClassName("item_shop_row2")[0].style.backgroundColor = "darkgreen"
-            document.getElementsByClassName("item_shop_row")[1].style.backgroundColor = "green"
-            document.getElementsByClassName("item_shop_row2")[1].style.backgroundColor = "darkgreen"
+            document.getElementsByClassName("item_shop_row")[0].style.backgroundColor = "rgb(67,102,12)"
+            document.getElementsByClassName("item_shop_row2")[0].style.backgroundColor = "rgb(67,102,12)"
+            document.getElementsByClassName("item_shop_row")[1].style.backgroundColor = "rgb(67,102,12)"
+            document.getElementsByClassName("item_shop_row2")[1].style.backgroundColor = "rgb(67,102,12)"
+            document.getElementsByClassName("selected_shop_panel")[0].style.borderTopColor = "rgb(116, 176, 28)"
+            document.getElementsByClassName("category_button")[1].classList.add("focus")
             break;        
         case 2:
             selectedModType = "Spirit"
-            document.getElementsByClassName("selected_shop_panel")[0].style.borderTopColor = "Fuchsia"
-            document.getElementsByClassName("item_shop_row")[0].style.backgroundColor = "purple"
-            document.getElementsByClassName("item_shop_row2")[0].style.backgroundColor = "darkorchid"
-            document.getElementsByClassName("item_shop_row")[1].style.backgroundColor = "purple"
-            document.getElementsByClassName("item_shop_row2")[1].style.backgroundColor = "darkorchid"
+            document.getElementsByClassName("item_shop_row")[0].style.backgroundColor = "rgb(98,66,123)"
+            document.getElementsByClassName("item_shop_row2")[0].style.backgroundColor = "rgb(98,66,123)"
+            document.getElementsByClassName("item_shop_row")[1].style.backgroundColor = "rgb(98,66,123)"
+            document.getElementsByClassName("item_shop_row2")[1].style.backgroundColor = "rgb(98,66,123)"
+            document.getElementsByClassName("selected_shop_panel")[0].style.borderTopColor = "rgb(194, 136, 240)"
+            document.getElementsByClassName("category_button")[2].classList.add("focus")
             break;        
     }
     console.log(selectedModType)
@@ -93,6 +103,7 @@ const temporaryJSON = [
     {
         "name": "Basic Magazine",
         "price": 500,
+        "tier": 1,
         "type": "Weapon",
 
         "stats": [
@@ -115,6 +126,7 @@ const temporaryJSON = [
     {
         "name": "Close Quarters",
         "price": 500,
+        "tier": 1,
         "type": "Weapon",
 
         "stats": [],
@@ -134,6 +146,7 @@ const temporaryJSON = [
     {
         "name": "Enduring Spirit",
         "price": 500,
+        "tier": 1,
         "type": "Vitality",
 
         "stats": [],
@@ -153,6 +166,7 @@ const temporaryJSON = [
     {
         "name": "Ammo Scavenger",
         "price": 500,
+        "tier": 1,
         "type": "Spirit",
 
         "stats": [],
@@ -172,6 +186,7 @@ const temporaryJSON = [
     {
         "name": "Infuser",
         "price": 500,
+        "tier": 1,
         "type": "Spirit",
 
         "stats": [],
@@ -191,6 +206,7 @@ const temporaryJSON = [
     {
         "name": "Active Reload",
         "price": 1250,
+        "tier": 2,
         "type": "Weapon",
 
         "stats": [],
@@ -210,6 +226,7 @@ const temporaryJSON = [
     {
         "name": "Burst Fire",
         "price": 3000,
+        "tier": 3,
         "type": "Weapon",
 
         "stats": [],
@@ -229,6 +246,7 @@ const temporaryJSON = [
     {
         "name": "Crippling Headshot",
         "price": 6300,
+        "tier": 4,
         "type": "Weapon",
 
         "stats": [],
