@@ -167,6 +167,15 @@ body {
     border-top: #e69437 10px solid;
 }
 
+.bottom_corner_text {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    font-size: 18px;
+    color: rgb(134, 134, 134);
+}
+
 @font-face {
     font-family: 'ShopFont';
     src: url('./retaildemo-bold.otf') format('opentype');
