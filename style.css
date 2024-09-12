@@ -5,7 +5,7 @@
     --mod-color-Spirit: rgb(194, 136, 240);
     --mod-color-Spirit-Active: rgb(218, 190, 240);
 
-
+    --mod-color-almostblack: rgb(51, 36, 9);
 }
 
 
@@ -40,6 +40,7 @@ body {
 
 .selected_shop_panel {
     border-top: 10px solid #e69437;
+    margin-top: 0;
 }
 
 .item_shop_row {
@@ -159,21 +160,36 @@ body {
     border-top-right-radius: 5px;
     width: 260px;
     height: 80px;
+}
 
+.category_text {
     font-size: 28px;
     font-family: ShopFont;
 }
 
+.category_icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+
+    filter: 
+        brightness(0) 
+        invert(13%) 
+        sepia(16%) 
+        brightness(98%) 
+        contrast(96%);
+}
+
 .top_border_weapon {
-    border-top: rgb(230, 148, 55) 10px solid;
+    border-top: rgb(230, 148, 55) 7px solid;
 }
 
 .top_border_vitality {
-    border-top: rgb(116, 176, 28) 10px solid;
+    border-top: rgb(116, 176, 28) 7px solid;
 }
 
 .top_border_spirit {
-    border-top: rgb(194, 136, 240) 10px solid;
+    border-top: rgb(194, 136, 240) 7px solid;
 }
 
 .top_border_weapon:active {
