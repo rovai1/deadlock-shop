@@ -46,7 +46,7 @@ function CreateCard(shittyobj) {
             document.getElementsByClassName("item_shop_row2")[1].appendChild(clone)
     }
 }
-
+// ik its bad
 function ChangeCategory(changed) {
     ChangeVisibility(selectedModType)
     switch(changed){
