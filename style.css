@@ -172,6 +172,10 @@ body {
     align-items: center;
 }
 
+.category_button:hover {
+    filter: brightness(90%)
+}
+
 .category_text {
     font-size: 28px;
     font-family: ShopFont;
