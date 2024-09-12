@@ -152,9 +152,14 @@ body {
         contrast(113%);
 }
 
+.shop_buttons {
+    display: flex;
+    flex-direction: row;
+}
+
 .category_button {
     margin-bottom: 0;
-    margin-right: 5px;
+    margin-right: 15px;
     background: beige;
     filter: brightness(80%);
     border: 0;
@@ -162,6 +167,9 @@ body {
     border-top-right-radius: 5px;
     width: 260px;
     height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .category_text {
