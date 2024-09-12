@@ -53,12 +53,27 @@ function ChangeCategory(changed) {
         default:
         case 0:
             selectedModType = "Weapon"
+            document.getElementsByClassName("selected_shop_panel")[0].style.borderTopColor = "rgb(230, 148, 55)"
+            document.getElementsByClassName("item_shop_row")[0].style.backgroundColor = "rgb(102, 61, 0)"
+            document.getElementsByClassName("item_shop_row2")[0].style.backgroundColor = "rgb(102, 61, 0)"
+            document.getElementsByClassName("item_shop_row")[1].style.backgroundColor = "rgb(102, 61, 0)"
+            document.getElementsByClassName("item_shop_row2")[1].style.backgroundColor = "rgb(102, 61, 0)"
             break;        
         case 1:
             selectedModType = "Vitality"
+            document.getElementsByClassName("selected_shop_panel")[0].style.borderTopColor = "GreenYellow"
+            document.getElementsByClassName("item_shop_row")[0].style.backgroundColor = "green"
+            document.getElementsByClassName("item_shop_row2")[0].style.backgroundColor = "darkgreen"
+            document.getElementsByClassName("item_shop_row")[1].style.backgroundColor = "green"
+            document.getElementsByClassName("item_shop_row2")[1].style.backgroundColor = "darkgreen"
             break;        
         case 2:
             selectedModType = "Spirit"
+            document.getElementsByClassName("selected_shop_panel")[0].style.borderTopColor = "Fuchsia"
+            document.getElementsByClassName("item_shop_row")[0].style.backgroundColor = "purple"
+            document.getElementsByClassName("item_shop_row2")[0].style.backgroundColor = "darkorchid"
+            document.getElementsByClassName("item_shop_row")[1].style.backgroundColor = "purple"
+            document.getElementsByClassName("item_shop_row2")[1].style.backgroundColor = "darkorchid"
             break;        
     }
     console.log(selectedModType)
