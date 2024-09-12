@@ -1,10 +1,11 @@
+let selectedModType = "Weapon"
+
 const reader = new FileReader()
 // fetch('./shop_data.json')
 //     .then((response) => response.json)
 //     .then((json) => readJson(jsonFile))
 
-
-function readJson(jsonFile){
+function readJson(jsonFile) {
     
     // reader.readAsText(jsonFile)
     // reader.onload = function(){
@@ -13,7 +14,7 @@ function readJson(jsonFile){
     // }
 }
 
-function CardRenderer(data){
+function CardRenderer(data) {
     data.forEach(element => {
         // var data = JSON.parse(element)
         CreateCard(element)
@@ -21,12 +22,16 @@ function CardRenderer(data){
 }
 
 
-function CreateCard(shittyobj){
+function CreateCard(shittyobj) {
     var cardTemplate = document.getElementsByClassName("card_template")[0]
     var clone = cardTemplate.content.cloneNode(true)
     clone.querySelector(".item_icon").src = shittyobj.icon
     clone.querySelector(".item_title").innerHTML = shittyobj.name
     clone.querySelector(".item_icon_div").style.setProperty("--mod-color", "var(--mod-color-" + shittyobj.type + (shittyobj.active? "-Active" : "") +")")
+    clone.querySelector(".item_shop_item").classList.add(shittyobj.type)
+    if(shittyobj.type != selectedModType) {
+        clone.querySelector(".item_shop_item").style.display = "none" 
+    }
 
     // This is temporary way to see how it now actually looks like. 
     // maybe we make all items have a tier and thats how we then separete them
@@ -40,6 +45,47 @@ function CreateCard(shittyobj){
         case 6300:
             document.getElementsByClassName("item_shop_row2")[1].appendChild(clone)
     }
+}
+// ik its bad
+function ChangeCategory(changed) {
+    ChangeVisibility(selectedModType)
+    switch(changed){
+        default:
+        case 0:
+            selectedModType = "Weapon"
+            document.getElementsByClassName("selected_shop_panel")[0].style.borderTopColor = "rgb(230, 148, 55)"
+            document.getElementsByClassName("item_shop_row")[0].style.backgroundColor = "rgb(102, 61, 0)"
+            document.getElementsByClassName("item_shop_row2")[0].style.backgroundColor = "rgb(102, 61, 0)"
+            document.getElementsByClassName("item_shop_row")[1].style.backgroundColor = "rgb(102, 61, 0)"
+            document.getElementsByClassName("item_shop_row2")[1].style.backgroundColor = "rgb(102, 61, 0)"
+            break;        
+        case 1:
+            selectedModType = "Vitality"
+            document.getElementsByClassName("selected_shop_panel")[0].style.borderTopColor = "GreenYellow"
+            document.getElementsByClassName("item_shop_row")[0].style.backgroundColor = "green"
+            document.getElementsByClassName("item_shop_row2")[0].style.backgroundColor = "darkgreen"
+            document.getElementsByClassName("item_shop_row")[1].style.backgroundColor = "green"
+            document.getElementsByClassName("item_shop_row2")[1].style.backgroundColor = "darkgreen"
+            break;        
+        case 2:
+            selectedModType = "Spirit"
+            document.getElementsByClassName("selected_shop_panel")[0].style.borderTopColor = "Fuchsia"
+            document.getElementsByClassName("item_shop_row")[0].style.backgroundColor = "purple"
+            document.getElementsByClassName("item_shop_row2")[0].style.backgroundColor = "darkorchid"
+            document.getElementsByClassName("item_shop_row")[1].style.backgroundColor = "purple"
+            document.getElementsByClassName("item_shop_row2")[1].style.backgroundColor = "darkorchid"
+            break;        
+    }
+    console.log(selectedModType)
+    ChangeVisibility(selectedModType, "block")
+}
+
+function ChangeVisibility(type, display = "none") {
+    var a = document.getElementsByClassName(type)
+    Array.prototype.forEach.call(
+        a,
+        (element) => element.style.display = display
+    )
 }
 
 
