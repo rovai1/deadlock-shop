@@ -39,16 +39,35 @@ body {
 }
 
 .selected_shop_panel {
-    border-top: 10px solid orange;
+    border-top: 10px solid #e69437;
 }
 
 .item_shop_row {
-    background-color: rgb(143, 92, 25);
+    background-color: #663D00;
     padding: 30px;
     width: 1400px;
     height: 140px;
     display: flex;
     flex-direction: row;
+    filter: brightness(80%);
+}
+
+.item_shop_row:hover {
+    filter: brightness(1);
+}
+
+.item_shop_row2 {
+    background-color: #663D00;
+    padding: 30px;
+    width: 1400px;
+    height: 140px;
+    display: flex;
+    flex-direction: row;
+    filter: brightness(70%);
+}
+
+.item_shop_row2:hover {
+    filter: brightness(1);
 }
 
 .item_shop_item {
@@ -97,17 +116,17 @@ body {
     font-family: ShopFont;
 }
 
-.row_price_div {
-    display: flex;
-    align-items: center;
-}
-
 .row_price {
     display: flex;
     justify-content: center;
     align-items: center;
     transform: rotate(-90deg);
-    color: #00FFFF;
+    color: #70f8c1; 
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: 120px;
+    overflow: hidden; 
 }
 
 .price_text {
@@ -122,12 +141,30 @@ body {
     filter: 
         brightness(0) 
         saturate(100%) 
-        invert(97%) 
-        sepia(45%) 
-        saturate(7432%) 
-        hue-rotate(104deg) 
-        brightness(107%) 
-        contrast(102%);
+        invert(96%) 
+        sepia(7%) 
+        saturate(3082%) 
+        hue-rotate(70deg) 
+        brightness(113%) 
+        contrast(113%);
+}
+
+.category_button {
+    margin-bottom: 0;
+    margin-right: 5px;
+    background: beige;
+    filter: brightness(80%);
+    border: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 260px;
+    height: 80px;
+
+    font-size: 28px;
+    font-family: ShopFont;
+
+    /* TODO: make color change depending on if its vitality, weapon or spirit */
+    border-top: #e69437 10px solid;
 }
 
 @font-face {

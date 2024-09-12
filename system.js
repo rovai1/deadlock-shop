@@ -27,7 +27,19 @@ function CreateCard(shittyobj){
     clone.querySelector(".item_icon").src = shittyobj.icon
     clone.querySelector(".item_title").innerHTML = shittyobj.name
     clone.querySelector(".item_icon_div").style.setProperty("--mod-color", "var(--mod-color-" + shittyobj.type + (shittyobj.active? "-Active" : "") +")")
-    document.getElementsByClassName("item_shop_row")[0].appendChild(clone)
+
+    // This is temporary way to see how it now actually looks like. 
+    // maybe we make all items have a tier and thats how we then separete them
+    switch(shittyobj.price){
+        case 500:
+            document.getElementsByClassName("item_shop_row")[0].appendChild(clone)
+        case 1250:
+            document.getElementsByClassName("item_shop_row2")[0].appendChild(clone)
+        case 3000:
+            document.getElementsByClassName("item_shop_row")[1].appendChild(clone)
+        case 6300:
+            document.getElementsByClassName("item_shop_row2")[1].appendChild(clone)
+    }
 }
 
 
@@ -129,6 +141,63 @@ const temporaryJSON = [
         "component_icon": "",
 
         "icon": "icons/upgrades/mods_weapon/ammo_scavenger_psd.png"
+    },
+    {
+        "name": "Active Reload",
+        "price": 1250,
+        "type": "Weapon",
+
+        "stats": [],
+
+        "passive": "",
+        "passive_cooldown": 0,
+
+        "active": false,
+        "active_cooldown": 0,
+
+        "component_of": "",
+        "components": [],
+        "component_icon": "",
+
+        "icon": "icons/upgrades/mods_utility/deployable_bullet_shield_psd.png"
+    },
+    {
+        "name": "Burst Fire",
+        "price": 3000,
+        "type": "Weapon",
+
+        "stats": [],
+
+        "passive": "",
+        "passive_cooldown": 0,
+
+        "active": false,
+        "active_cooldown": 0,
+
+        "component_of": "",
+        "components": [],
+        "component_icon": "",
+
+        "icon": "icons/upgrades/mods_weapon/fire_rate_plus_plus_psd.png"
+    },
+    {
+        "name": "Crippling Headshot",
+        "price": 6300,
+        "type": "Weapon",
+
+        "stats": [],
+
+        "passive": "",
+        "passive_cooldown": 0,
+
+        "active": false,
+        "active_cooldown": 0,
+
+        "component_of": "",
+        "components": [],
+        "component_icon": "",
+
+        "icon": "icons/upgrades/mods_weapon/banshee_slugs_psd.png"
     }
 ]
 
