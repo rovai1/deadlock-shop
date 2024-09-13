@@ -1,0 +1,36 @@
+/*
+This file includes the css of the top level of the page 
+so body and the 2 sides of the page
+*/
+
+body {
+    background: rgb(38,57,25);
+    background: linear-gradient(
+        180deg, 
+        rgba(2, 3, 2, 0.9) 20%, 
+        rgba(2, 7, 2, 0.9) 50%, 
+        rgba(6, 17, 0, 0.9) 100%
+    );
+}
+
+/* The right side of the page */
+.shop {
+    display: flex;
+    flex-direction: row;
+}
+
+/* left side of the page */
+.left_side {
+    padding: 50px;
+    width: 600px;
+}
+
+.shop_panels {
+    margin-top: 150px;
+}
+
+/* logo at the top left side */
+.shop_logo {
+    width: 370px;
+    height: auto;
+}

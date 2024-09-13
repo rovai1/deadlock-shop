@@ -1,0 +1,61 @@
+/*
+This file includes the css of the items on the shop
+*/
+
+:root
+{
+    --mod-color-Weapon: rgb(230, 148, 55);
+    --mod-color-Vitality: rgb(116, 176, 28);
+    --mod-color-Spirit: rgb(194, 136, 240);
+    --mod-color-Spirit-Active: rgb(218, 190, 240);
+
+    --mod-color-almostblack: rgb(51, 36, 9);
+}
+
+/* div of an item */
+.item_shop_item {
+    border-radius: 5px;
+    background-color: beige;
+    width: 131px;
+    height: 150px;
+    box-shadow: 6px 6px 0px  rgba(0, 0, 0, 0.3);
+    transition: all 50ms;
+}
+
+.item_shop_item:hover {
+    scale: 1.03;
+    box-shadow: 1px 1px 0px  rgba(0, 0, 0, 0.3);
+
+}
+
+/* top half of the item div */
+.item_icon_div {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    height: 50%;
+    background-color: var(--mod-color);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.item_icon {
+    width: 50px;
+    height: auto;
+    filter: brightness(0%);
+}
+
+/* Bottom half of the item div */
+.item_title_div {
+    height: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.item_title {
+    margin: 6px;
+    font-size: 18px;
+    font-family: ShopFont;
+}
