@@ -41,7 +41,8 @@
     background-color: #80550f;
     display: flex;
     flex-direction: column;
-    align-items: flex-start
+    align-items: flex-start;
+    list-style: none;
 }
 
 .tooltip_passive {
