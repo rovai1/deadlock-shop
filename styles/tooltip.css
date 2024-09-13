@@ -1,0 +1,75 @@
+.tooltip-container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip {
+    display: none;
+    position: fixed; /* or position: absolute */
+    width: 400px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    top: 50%; /* Position relative to the viewport */
+    left: calc(100% + 20px); /* Ensure proper placement */
+    transform: translateY(-50%);
+}
+
+.tooltip-container:hover .tooltip {
+    display: block;
+}
+
+.tooltip_title {
+    background-color: #c97a03;
+    color: #ffefd7;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tooltip_title_text {
+    color: #ffefd7;
+    font-size: 30px;
+    font-family: ShopFont;
+}
+
+.tooltip_stats {
+    padding: 10px;
+    margin: 0;
+    background-color: #80550f;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+}
+
+.tooltip_passive {
+    display: none;
+    background-color: #583b0e;
+    /* extra info things use #654209 */
+}
+
+.tooltip_active {
+    display: none;
+}
+
+.tooltip_cost {
+    display: flex;
+    justify-content: center;
+}
+
+.soul_cost_text {
+    color: #70f8c1;
+    font-size: 20px;
+}
+
+.tooltip_components {
+    background-color: #704a0c;
+}
+
+/* 
+passive title text  #c4b49e
+basic text          #cdc4bd
+active title text   #ffefd7
+*/

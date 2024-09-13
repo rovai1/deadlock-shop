@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/shop.css">
     <link rel="stylesheet" href="styles/item.css">
     <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/tooltip.css">
 </head>
 <body>
     <div class="shop">
@@ -69,12 +70,28 @@
     </div>
 
     <template class="card_template">
-        <div class="item_shop_item">
+        <div class="item_shop_item tooltip-container">
             <div class="item_icon_div">
                 <img src="icons/upgrades/mods_weapon/clip_size_psd.png" class="item_icon">
             </div>
             <div class="item_title_div">
                 <span class="item_title">Basic Magazine</span>
+            </div>
+            <div class="tooltip">
+                <div class="tooltip_title">
+                    <span class="tooltip_title_text">Basic Magazine</span>
+                    <div class="tooltip_cost">
+                        <img class="souls_cost" src="icons/icon_soul.png">
+                        <span class="soul_cost_text">500</span>
+                    </div>
+                </div>
+                <ul class="tooltip_stats"></ul>
+                <div class="tooltip_passive">
+                    <div class="passive_title"></div>
+                    <div class="passive_info"></div>
+                </div>
+                <div class="tooltip_active"></div>
+                <div class="tooltip_components"></div>
             </div>
         </div>
     </template>

@@ -43,7 +43,6 @@ This file includes the css of the items on the shop
 .item_icon {
     width: 50px;
     height: auto;
-    filter: brightness(0%);
 }
 
 /* Bottom half of the item div */

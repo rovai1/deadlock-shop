@@ -29,6 +29,15 @@ function CreateCard(shittyobj) {
     clone.querySelector(".item_title").innerHTML = shittyobj.name
     clone.querySelector(".item_icon_div").style.setProperty("--mod-color", "var(--mod-color-" + shittyobj.type + (shittyobj.isActive? "-Active" : "") +")")
     clone.querySelector(".item_shop_item").classList.add(shittyobj.type)
+    clone.querySelector(".tooltip_title_text").innerHTML = shittyobj.name
+    clone.querySelector(".soul_cost_text").innerHTML = shittyobj.price
+    stats = ""
+    if(shittyobj.stats) {
+        for(let i = 0; i < shittyobj.stats.length; i++) {
+            stats += "<li>" + String(shittyobj.stats[i]) + "</li>"
+        }
+    }
+    clone.querySelector(".tooltip_stats").innerHTML = stats
     if(shittyobj.type != selectedModType) {
         clone.querySelector(".item_shop_item").style.display = "none" 
     }
@@ -672,7 +681,7 @@ const temporaryJSON = [
         "icon": ""
     },
     {
-        "name": "",
+        "name": "Pristine Emblem",
         "price": 3000,
         "tier": 3,
         "type": "Weapon",
@@ -1059,7 +1068,7 @@ const temporaryJSON = [
         "icon": ""
     },
     {
-        "name": "",
+        "name": "Vampiric Burst",
         "price": 6300,
         "tier": 4,
         "type": "Weapon",

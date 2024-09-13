@@ -4,6 +4,7 @@ so body and the 2 sides of the page
 */
 
 body {
+    font-family: ShopFont;
     background: rgb(38,57,25);
     background: linear-gradient(
         180deg, 
