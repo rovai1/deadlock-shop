@@ -24,6 +24,7 @@ This file includes the css of the shop rows, buttons and prices
     flex-wrap: wrap;
     gap: 10px;
     align-items: center;
+    max-width: 1290px;
 }
 
 .item_shop_row:nth-child(odd) {
@@ -39,16 +40,21 @@ This file includes the css of the shop rows, buttons and prices
 }
 
 .row_price {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    transform: rotate(-90deg);
     color: #70f8c1; 
     display: flex;
     align-items: center;
-    height: auto;
-    width: 120px;
+    height: 140px;
+    min-width: 120px;
+    max-width: 120px;
     overflow: hidden; 
+}
+
+.rotate_price {
+    transform: rotate(-90deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .price_text {
